@@ -1,0 +1,66 @@
+{
+  "name": "dsh-claude-oauth",
+  "version": "1.0.0",
+  "description": "Claude Pro/Max OAuth model provider for DeepSeek Harness with Google/Gmail login in Settings, auto-token refresh, live model discovery, and real-time quota tracking",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "bin",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "assets"
+  ],
+  "bin": {
+    "claude-oauth-login": "bin/claude-oauth-login.mjs"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js && node --check bin/claude-oauth-login.mjs",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "claude",
+    "anthropic",
+    "oauth",
+    "gmail-login",
+    "google-oauth",
+    "llm",
+    "quota-tracking"
+  ],
+  "author": "grloper <dev.user@gmail.com> (https://github.com/grloper)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grloper/dsh-claude-oauth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grloper/dsh-claude-oauth/issues"
+  },
+  "homepage": "https://github.com/grloper/dsh-claude-oauth#readme"
+}

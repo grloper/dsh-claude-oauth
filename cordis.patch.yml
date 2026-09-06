@@ -1,0 +1,5 @@
+# dsh-claude-oauth bundle patch
+# Inserts the Claude OAuth provider into DeepSeek Harness.
+- insert:
+    - id: claude-oauth-provider
+      name: dsh-claude-oauth

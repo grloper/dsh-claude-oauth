@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#18181c"/>
+    </linearGradient>
+    <linearGradient id="claudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="amberBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Window -->
+  <rect x="0" y="0" width="1000" height="640" rx="16" fill="url(#bgGrad)"/>
+  <rect x="0.5" y="0.5" width="999" height="639" rx="15.5" fill="none" stroke="#2c2c34" stroke-width="1"/>
+
+  <!-- Window Titlebar -->
+  <rect x="0" y="0" width="1000" height="42" rx="16" fill="#141418"/>
+  <rect x="0" y="30" width="1000" height="12" fill="#141418"/>
+  <line x1="0" y1="42" x2="1000" y2="42" stroke="#26262e" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5.5" fill="#ef4444"/>
+  <circle cx="42" cy="21" r="5.5" fill="#f59e0b"/>
+  <circle cx="60" cy="21" r="5.5" fill="#10b981"/>
+  <text x="500" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#8b8d98" text-anchor="middle" font-weight="500">DeepSeek Harness — Settings</text>
+
+  <!-- Settings Modal Frame -->
+  <g transform="translate(40, 64)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="920" height="540" rx="12" fill="#1a1a20" stroke="#2e2e38" stroke-width="1"/>
+
+    <!-- Left Sidebar -->
+    <rect x="0" y="0" width="220" height="540" rx="12" fill="#16161b"/>
+    <rect x="208" y="0" width="12" height="540" fill="#16161b"/>
+    <line x1="220" y1="0" x2="220" y2="540" stroke="#272730" stroke-width="1"/>
+
+    <text x="24" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#6c6e79" font-weight="700" letter-spacing="1">PREFERENCES</text>
+
+    <!-- Nav Items -->
+    <text x="36" y="72" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">General</text>
+    <text x="36" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Models</text>
+    <text x="36" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Antigravity</text>
+
+    <!-- Active Item: Claude -->
+    <rect x="12" y="156" width="196" height="34" rx="8" fill="#2d2218" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
+    <rect x="20" y="165" width="16" height="16" rx="4" fill="url(#claudeGrad)"/>
+    <text x="28" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#fff" font-weight="700" text-anchor="middle">C</text>
+    <text x="44" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#fbbf24" font-weight="600">Claude (Anthropic)</text>
+
+    <text x="36" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">OpenAI Codex</text>
+    <text x="36" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Subscriptions</text>
+    <text x="36" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Plugins</text>
+    <text x="36" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Workspaces</text>
+
+    <!-- Main Content Area -->
+    <g transform="translate(244, 24)">
+      <!-- Header -->
+      <g>
+        <rect x="0" y="0" width="30" height="30" rx="8" fill="url(#claudeGrad)"/>
+        <text x="15" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#fff" font-weight="800" text-anchor="middle">C</text>
+        <text x="40" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" fill="#ffffff" font-weight="600">Claude (Anthropic)</text>
+        <text x="0" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#9a9ca6">Sign in with your Claude Pro / Max account via Google (Gmail) or email OAuth.</text>
+
+        <!-- Header Actions -->
+        <rect x="520" y="2" width="124" height="32" rx="6" fill="#24242d" stroke="#3b3b47" stroke-width="1"/>
+        <text x="582" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e4e4e7" font-weight="500" text-anchor="middle">Refresh Quota</text>
+      </g>
+
+      <line x1="0" y1="64" x2="644" y2="64" stroke="#2c2c36" stroke-width="1"/>
+
+      <!-- Account Card -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="644" height="92" rx="10" fill="#202028" stroke="#2e2e3a" stroke-width="1"/>
+        
+        <circle cx="36" cy="46" r="20" fill="#d97706"/>
+        <text x="36" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#ffffff" font-weight="700" text-anchor="middle">O</text>
+
+        <text x="68" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" fill="#f4f4f5" font-weight="600">dev.user@gmail.com</text>
+        
+        <!-- Plan Badge -->
+        <rect x="250" y="24" width="90" height="20" rx="10" fill="#065f46" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+        <text x="295" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#34d399" font-weight="700" text-anchor="middle">CLAUDE MAX</text>
+
+        <text x="68" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#71717a">Connected via Google OAuth · Unified Rate Limit Tier: default_claude_max_5x</text>
+
+        <circle cx="612" cy="46" r="5" fill="#10b981"/>
+      </g>
+
+      <!-- Quota Card -->
+      <g transform="translate(0, 186)">
+        <rect x="0" y="0" width="644" height="136" rx="10" fill="#202028" stroke="#2e2e3a" stroke-width="1"/>
+        <text x="16" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#71717a" font-weight="700" letter-spacing="0.5">SUBSCRIPTION QUOTA &amp; USAGE</text>
+
+        <!-- 5h Bar -->
+        <text x="16" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#9a9ca6" font-weight="500">5-Hour Window</text>
+        <rect x="120" y="44" width="440" height="12" rx="6" fill="#141418"/>
+        <rect x="120" y="44" width="114" height="12" rx="6" fill="url(#greenBar)"/>
+        <text x="580" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e4e4e7" font-weight="600">26%</text>
+
+        <!-- 7d Bar -->
+        <text x="16" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#9a9ca6" font-weight="500">7-Day Window</text>
+        <rect x="120" y="76" width="440" height="12" rx="6" fill="#141418"/>
+        <rect x="120" y="76" width="185" height="12" rx="6" fill="url(#amberBar)"/>
+        <text x="580" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e4e4e7" font-weight="600">42%</text>
+
+        <line x1="16" y1="104" x2="628" y2="104" stroke="#282832" stroke-width="1"/>
+        <text x="16" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#71717a">Primary window resets in 3h 18m · Live headers from /v1/messages</text>
+      </g>
+
+      <!-- Available Models Card -->
+      <g transform="translate(0, 334)">
+        <rect x="0" y="0" width="644" height="136" rx="10" fill="#202028" stroke="#2e2e3a" stroke-width="1"/>
+        <text x="16" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#71717a" font-weight="700" letter-spacing="0.5">ACTIVE CLAUDE MODELS IN DSH</text>
+
+        <!-- Models Grid -->
+        <g transform="translate(16, 38)">
+          <rect x="0" y="0" width="296" height="36" rx="6" fill="#17171d" stroke="#2c2c36" stroke-width="1"/>
+          <text x="14" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#10b981">✓</text>
+          <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#f4f4f5" font-weight="500">Claude Sonnet 4.5</text>
+          <text x="210" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#71717a">200k · Thinking</text>
+
+          <rect x="312" y="0" width="296" height="36" rx="6" fill="#17171d" stroke="#2c2c36" stroke-width="1"/>
+          <text x="326" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#10b981">✓</text>
+          <text x="344" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#f4f4f5" font-weight="500">Claude Opus 4.5</text>
+          <text x="522" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#71717a">200k · Reasoning</text>
+
+          <rect x="0" y="44" width="296" height="36" rx="6" fill="#17171d" stroke="#2c2c36" stroke-width="1"/>
+          <text x="14" y="67" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#10b981">✓</text>
+          <text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#f4f4f5" font-weight="500">Claude Haiku 4.5</text>
+          <text x="235" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#71717a">Fast · 200k</text>
+
+          <rect x="312" y="44" width="296" height="36" rx="6" fill="#17171d" stroke="#2c2c36" stroke-width="1"/>
+          <text x="326" y="67" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#10b981">✓</text>
+          <text x="344" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#f4f4f5" font-weight="500">Claude 3.7 Sonnet</text>
+          <text x="532" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#71717a">Hybrid Mode</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0e12"/>
+      <stop offset="100%" stop-color="#161820"/>
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2029"/>
+      <stop offset="100%" stop-color="#14151b"/>
+    </linearGradient>
+    <linearGradient id="claudeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="480" rx="14" fill="url(#bg2)" stroke="#262833" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="480" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#ffffff" font-weight="700" text-anchor="middle">DeepSeek Harness — Claude OAuth &amp; Multi-Store Synchronization</text>
+  <text x="480" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b8d98" text-anchor="middle">Automated PKCE Loopback Flow with Google (Gmail) Sign-In</text>
+
+  <!-- Step 1: DSH Web GUI -->
+  <g transform="translate(40, 110)">
+    <rect width="240" height="150" rx="10" fill="url(#boxGrad1)" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="14" y="14" width="8" height="8" rx="4" fill="#3b82f6"/>
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#93c5fd" font-weight="700">1. DSH Web GUI</text>
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Settings → Claude</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">User clicks "Sign in with Google"</text>
+    <text x="14" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Polls /api/anthropic-oauth/status</text>
+    <rect x="14" y="110" width="212" height="24" rx="4" fill="#1e3a8a" fill-opacity="0.4"/>
+    <text x="120" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="500">Live Quota &amp; Status Auto-Refresh</text>
+  </g>
+
+  <!-- Step 2: Browser & Anthropic OAuth -->
+  <g transform="translate(360, 110)">
+    <rect width="240" height="150" rx="10" fill="url(#boxGrad1)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="14" y="14" width="8" height="8" rx="4" fill="#f59e0b"/>
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#fcd34d" font-weight="700">2. Anthropic / Claude.ai</text>
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">OAuth 2.0 PKCE Authorize</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">User selects "Continue with Google"</text>
+    <text x="14" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Approves Claude Code Client ID</text>
+    <rect x="14" y="110" width="212" height="24" rx="4" fill="#78350f" fill-opacity="0.4"/>
+    <text x="120" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="500">Redirects to localhost:port/callback</text>
+  </g>
+
+  <!-- Step 3: DSH Host Bridge -->
+  <g transform="translate(680, 110)">
+    <rect width="240" height="150" rx="10" fill="url(#boxGrad1)" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="14" y="14" width="8" height="8" rx="4" fill="#10b981"/>
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#6ee7b7" font-weight="700">3. Host Plugin Engine</text>
+    <text x="14" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Dual-Stack Callback Listener</text>
+    <text x="14" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Validates state &amp; code verifier</text>
+    <text x="14" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Exchanges code for access_token</text>
+    <rect x="14" y="110" width="212" height="24" rx="4" fill="#064e3b" fill-opacity="0.4"/>
+    <text x="120" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#34d399" text-anchor="middle" font-weight="500">Fetches Profile (/api/oauth/profile)</text>
+  </g>
+
+  <!-- Flow Arrows Top Row -->
+  <path d="M 280 170 L 350 170" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="315" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">Open Tab</text>
+
+  <path d="M 600 170 L 670 170" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowAmber)"/>
+  <text x="635" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#fcd34d" text-anchor="middle">Redirect</text>
+
+  <!-- Step 4: Multi-Store Persistence & Model Discovery -->
+  <g transform="translate(140, 310)">
+    <rect width="680" height="130" rx="10" fill="url(#boxGrad1)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#c4b5fd" font-weight="700">4. Automatic Multi-Store Credential Sync &amp; Live Model Mounting</text>
+
+    <!-- Sub-boxes -->
+    <g transform="translate(20, 44)">
+      <rect width="196" height="66" rx="6" fill="#1c1926" stroke="#4c1d95" stroke-width="1"/>
+      <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#a78bfa" font-weight="700">~/.claude/.credentials.json</text>
+      <text x="12" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Shared with Claude Code CLI</text>
+      <text x="12" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#64748b">Tokens, scopes, tier</text>
+    </g>
+
+    <g transform="translate(242, 44)">
+      <rect width="196" height="66" rx="6" fill="#1c1926" stroke="#4c1d95" stroke-width="1"/>
+      <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#a78bfa" font-weight="700">~/.dsh/.credentials.yaml</text>
+      <text x="12" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Native DSH credential seam</text>
+      <text x="12" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#64748b">ANTHROPIC_OAUTH_TOKEN</text>
+    </g>
+
+    <g transform="translate(464, 44)">
+      <rect width="196" height="66" rx="6" fill="#1c1926" stroke="#4c1d95" stroke-width="1"/>
+      <text x="12" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#a78bfa" font-weight="700">~/.dsh/settings.yaml</text>
+      <text x="12" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">llm-pi-ai.providers.anthropic</text>
+      <text x="12" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#64748b">Sonnet 4.5, 3.7, Opus, Haiku</text>
+    </g>
+  </g>
+
+  <!-- Connecting Arrows Downward -->
+  <path d="M 800 260 L 800 295 L 750 295 L 750 305" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="810" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#34d399">Save Tokens</text>
+</svg>
