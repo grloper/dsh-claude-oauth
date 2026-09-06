@@ -53,7 +53,7 @@
     "llm",
     "quota-tracking"
   ],
-  "author": "grloper <dev.user@gmail.com> (https://github.com/grloper)",
+  "author": "grloper (https://github.com/grloper)",
   "license": "MIT",
   "repository": {
     "type": "git",

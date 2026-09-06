@@ -86,7 +86,7 @@
         <rect x="0" y="0" width="644" height="92" rx="10" fill="#202028" stroke="#2e2e3a" stroke-width="1"/>
         
         <circle cx="36" cy="46" r="20" fill="#d97706"/>
-        <text x="36" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#ffffff" font-weight="700" text-anchor="middle">O</text>
+        <text x="36" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#ffffff" font-weight="700" text-anchor="middle">D</text>
 
         <text x="68" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" fill="#f4f4f5" font-weight="600">dev.user@gmail.com</text>
         
