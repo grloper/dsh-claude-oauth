@@ -22,7 +22,7 @@ To eliminate this friction once and for all, I built and open-sourced **[`dsh-cl
 
 Here is the native Settings interface that `dsh-claude-oauth` contributes to DeepSeek Harness:
 
-![DSH Claude Settings UI](https://raw.githubusercontent.com/grloper/dsh-claude-oauth/master/assets/claude-settings-ui.svg)
+![DSH Claude Settings UI](https://raw.githubusercontent.com/grloper/dsh-claude-oauth/master/assets/claude-settings-ui.png?v=2)
 
 ### What You See in Settings
 * **Dedicated Navigation Entry**: Positioned at order `13` in the Settings sidebar, sitting cleanly alongside Antigravity (Google Gemini) and OpenAI Codex.
@@ -36,7 +36,7 @@ Here is the native Settings interface that `dsh-claude-oauth` contributes to Dee
 
 Under the hood, `dsh-claude-oauth` is divided into two cooperative halves: a **Host plugin** running in Node.js and a **Web Client plugin** running in the browser.
 
-![OAuth Architecture Flow](https://raw.githubusercontent.com/grloper/dsh-claude-oauth/master/assets/oauth-architecture.svg)
+![OAuth Architecture Flow](https://raw.githubusercontent.com/grloper/dsh-claude-oauth/master/assets/oauth-architecture.png)
 
 ### 3.1 The PKCE Loopback Flow & The Windows IPv6 Pitfall
 
