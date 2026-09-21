@@ -14,7 +14,7 @@ import { exec } from 'node:child_process'
 
 const CLIENT_ID = '9d1c250a-e61b-44d9-88ed-5944d1962f5e'
 const TOKEN_URL = 'https://claude.ai/v1/oauth/token'
-const SCOPES = 'org:create_api_key user:profile user:inference user:sessions:claude_code user:mcp_servers user:file_upload'
+const SCOPES = 'user:profile user:inference'
 
 function openUrl(url) {
   const start = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start ""' : 'xdg-open'
