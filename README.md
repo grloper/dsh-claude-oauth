@@ -15,7 +15,7 @@
 
 The source contains an OAuth PKCE callback flow, credential synchronization, model discovery, and quota probing. These are implementation claims, not evidence of current upstream authorization or DSH compatibility. No live login, token refresh, credential file access, model request, or quota probe was performed in this review. The quota implementation calls `/v1/messages` with `max_tokens: 1`; it is an inference request and should not be described as a free read-only probe.
 
-`npm run check` checks syntax; `npm test` verifies five metadata/header/PKCE cases. Those tests do not exercise the host plugin lifecycle, callback validation, token storage, refresh, or UI. The SVG below is a design asset, not a captured authenticated runtime demo. Existing compatibility badges are unverified.
+`npm run check` checks syntax; `npm test` verifies six metadata/header/PKCE/HTML-escaping cases. Those tests do not exercise the host plugin lifecycle, callback validation, token storage, refresh, or UI. The SVG below is a design asset, not a captured authenticated runtime demo. Existing compatibility badges are unverified. Callback error and profile text now escapes HTML markup before rendering; authentication scopes, token exchange and credential behavior are unchanged.
 
 ## Preview
 
