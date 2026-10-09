@@ -36,7 +36,7 @@
   },
   "scripts": {
     "check": "node --check lib/index.js && node --check lib/client.js && node --check bin/claude-oauth-login.mjs",
-    "test": "node --test test/*.test.js"
+    "test": "node test/plugin.test.js"
   },
   "engines": {
     "node": ">=20"

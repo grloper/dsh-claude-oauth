@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
 import crypto from 'node:crypto'
-import { getClientId, getClaudeCodeVersion, claudeCodeHeaders, name, inject, escapeHtml } from '../lib/index.js'
+import { getClientId, getClaudeCodeVersion, claudeCodeHeaders, name, inject, escapeHtml, CLAUDE_SCOPE } from '../lib/index.js'
 
 test('plugin metadata', () => {
   assert.strictEqual(name, 'dsh-claude-oauth')
@@ -50,3 +50,10 @@ test('callback response escapes untrusted error and profile markup', () => {
   assert.strictEqual(escapeHtml(null), '')
   assert.strictEqual(escapeHtml('normal@example.com'), 'normal@example.com')
 })
+
+test('scopes enforce least privilege without org api key creation', () => {
+  assert.ok(!CLAUDE_SCOPE.includes('org:create_api_key'), 'Must not request org:create_api_key scope')
+  assert.ok(CLAUDE_SCOPE.includes('user:profile'))
+  assert.ok(CLAUDE_SCOPE.includes('user:inference'))
+})
+
