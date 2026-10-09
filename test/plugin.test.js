@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
 import crypto from 'node:crypto'
-import { getClientId, getClaudeCodeVersion, claudeCodeHeaders, name, inject } from '../lib/index.js'
+import { getClientId, getClaudeCodeVersion, claudeCodeHeaders, name, inject, escapeHtml } from '../lib/index.js'
 
 test('plugin metadata', () => {
   assert.strictEqual(name, 'dsh-claude-oauth')
@@ -41,4 +41,12 @@ test('pkce verifier and challenge generation', () => {
   assert.strictEqual(challenge.length, 43)
   assert.ok(!verifier.includes('+') && !verifier.includes('/') && !verifier.includes('='))
   assert.ok(!challenge.includes('+') && !challenge.includes('/') && !challenge.includes('='))
+})
+
+
+test('callback response escapes untrusted error and profile markup', () => {
+  assert.strictEqual(escapeHtml('<img src=x onerror="alert(1)">&'), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;&amp;')
+  assert.strictEqual(escapeHtml("O'Reilly"), 'O&#39;Reilly')
+  assert.strictEqual(escapeHtml(null), '')
+  assert.strictEqual(escapeHtml('normal@example.com'), 'normal@example.com')
 })
