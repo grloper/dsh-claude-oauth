@@ -1,5 +1,6 @@
 # dsh-claude-oauth
 
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/grloper/dsh-claude-oauth)
 [![npm version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/grloper/dsh-claude-oauth)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DSH Compatibility](https://img.shields.io/badge/DSH-0.1.0--rc.6%20%7C%200.1.2-green.svg)](https://github.com/deepseek-ai/deepseek-harness)
